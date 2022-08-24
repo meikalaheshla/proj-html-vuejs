@@ -1,11 +1,27 @@
 <template>
-    <header>
+    <nav id="navbar" class=" navbar navbar-dark ">
+        <ul>
+            <li>
 
-    </header>
+
+            </li>
+        </ul>
+
+    </nav>
 </template>
 
 <script>
+
+export default {
+    name: 'HeaderNavbar',
+
+}
+
 </script>
-<style scoped lang=" scss">
-    @import '../assets/sass/_var.scss';
+<style scoped lang="scss">
+@import '../assets/sass/_var.scss';
+
+#navbar {
+    color: $white;
+}
 </style>
