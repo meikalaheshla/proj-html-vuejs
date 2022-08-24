@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    ciao froci
 
   </div>
 </template>
