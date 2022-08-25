@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div>
 
         <figure>
             <img src="https://avada.theme-fusion.com/fitness/wp-content/uploads/sites/130/2021/04/logo-svg.svg"
@@ -20,5 +20,5 @@ export default {
 
 </script>
 <style scoped lang="scss">
-@import '../assets/sass/_var.scss';
+@import '../assets/sass/_vars.scss';
 </style>

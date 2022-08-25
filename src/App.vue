@@ -2,6 +2,10 @@
   <div>
     <MainHeader />
     <TheFooter />
+    <h1>
+      <font-awesome-icon icon="fa-brands fa-vuejs" />
+
+    </h1>
   </div>
 </template>
 

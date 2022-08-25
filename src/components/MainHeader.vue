@@ -21,10 +21,11 @@ export default {
 
 </script>
 <style scoped lang="scss">
-@import '../assets/sass/_var.scss';
+@import '../assets/sass/_vars.scss';
 
 header {
-    background-color: $cod_gray;
+    background-color: $header_bg;
+
 
 }
 </style>
