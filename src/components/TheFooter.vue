@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <font-awesome-icon icon="fa-solid fa-angle-down" />
+
     </footer>
 </template>
 

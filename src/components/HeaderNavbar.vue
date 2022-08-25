@@ -3,86 +3,75 @@
         <ul class="d-flex">
             <li v-for="link in links" :key="link.id" class="mx-3" :class="{ 'active': link.current }">
                 <a class="navbar-link fw-semibold" icon="faHatWizard" :href="link.url">{{ link.text }}
+                    <div v-if="link.new" class="new-link-label px-1 mx-2">new</div>
                     <font-awesome-icon v-if="link.dropDown" icon="fa-solid fa-angle-down" />
-                    <div v-if="link.new" class="new-link-label px-1 ">new</div>
                 </a>
-
-
-
-
             </li>
-
-
-
         </ul>
-
+        <BaseButton />
 
     </nav>
 </template>
 
 <script>
+import BaseButton from './BaseButton.vue';
 export default {
-    name: 'HeaderNavbar',
+    name: "HeaderNavbar",
     data() {
         return {
             links: [
                 {
-                    text: 'Home',
-                    url: '#',
+                    text: "Home",
+                    url: "#",
                     current: false,
                     id: 1,
                     dropDown: false,
                     new: false,
-
                 },
                 {
-                    text: 'Services',
-                    url: '#',
+                    text: "Services",
+                    url: "#",
                     current: false,
                     id: 2,
                     dropDown: true,
                     new: false,
-
                 },
                 {
-                    text: 'About',
-                    url: '#',
+                    text: "About",
+                    url: "#",
                     current: false,
                     id: 3,
                     dropDown: true,
                     new: false,
                 },
                 {
-                    text: 'Videos',
-                    url: '#',
+                    text: "Videos",
+                    url: "#",
                     current: false,
                     id: 4,
                     dropDown: true,
                     new: false,
-
                 },
                 {
-                    text: 'Blog',
-                    url: '#',
+                    text: "Blog",
+                    url: "#",
                     current: false,
                     id: 5,
                     dropDown: false,
                     new: false,
-
                 },
                 {
-                    text: 'Store',
-                    url: '#',
+                    text: "Store",
+                    url: "#",
                     current: false,
                     id: 6,
                     dropDown: true,
                     new: true,
-
                 },
             ]
-        }
-    }
-
+        };
+    },
+    components: { BaseButton }
 }
 
 </script>
@@ -99,7 +88,6 @@ export default {
         display: inline-block;
         color: $new_link_label_txt_color;
         font-size: 0.8rem;
-
         text-align: center;
 
     }
