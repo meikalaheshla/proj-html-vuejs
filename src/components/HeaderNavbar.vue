@@ -2,8 +2,9 @@
     <nav id="navbar" class=" navbar navbar-dark ">
         <ul class="d-flex">
             <li v-for="link in links" :key="link.id" class="mx-3" :class="{ 'active': link.current }">
-                <a class="navbar-link" icon="faHatWizard" :href="link.url">{{ link.text }}
+                <a class="navbar-link fw-semibold" icon="faHatWizard" :href="link.url">{{ link.text }}
                     <font-awesome-icon v-if="link.dropDown" icon="fa-solid fa-angle-down" />
+                    <div v-if="link.new" class="new-link-label px-1 ">new</div>
                 </a>
 
 
@@ -14,6 +15,7 @@
 
 
         </ul>
+
 
     </nav>
 </template>
@@ -30,6 +32,7 @@ export default {
                     current: false,
                     id: 1,
                     dropDown: false,
+                    new: false,
 
                 },
                 {
@@ -38,6 +41,7 @@ export default {
                     current: false,
                     id: 2,
                     dropDown: true,
+                    new: false,
 
                 },
                 {
@@ -46,6 +50,7 @@ export default {
                     current: false,
                     id: 3,
                     dropDown: true,
+                    new: false,
                 },
                 {
                     text: 'Videos',
@@ -53,6 +58,7 @@ export default {
                     current: false,
                     id: 4,
                     dropDown: true,
+                    new: false,
 
                 },
                 {
@@ -61,6 +67,7 @@ export default {
                     current: false,
                     id: 5,
                     dropDown: false,
+                    new: false,
 
                 },
                 {
@@ -69,6 +76,7 @@ export default {
                     current: false,
                     id: 6,
                     dropDown: true,
+                    new: true,
 
                 },
             ]
@@ -83,5 +91,17 @@ export default {
 
 .navbar-link {
     color: $navbar_links_inactive;
+
+    .new-link-label {
+        border-radius: 2px;
+        height: 100%;
+        background-color: $new_link_label_bg_color;
+        display: inline-block;
+        color: $new_link_label_txt_color;
+        font-size: 0.8rem;
+
+        text-align: center;
+
+    }
 }
 </style>
